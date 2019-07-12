@@ -3,6 +3,9 @@ window.onload = function(){
     if(document.querySelector(".toaster-message")){
         document.querySelector(".send-otp-btn").addEventListener("click", function(){
             document.querySelector(".otp-resent").classList.toggle("show-otp");
+            setTimeout(function(){
+                document.querySelector(".otp-resent").classList.remove("show-otp");
+            },1500)
         })
     // click of resend otp show the resent message (end)
 
@@ -24,6 +27,11 @@ window.onload = function(){
 
     document.querySelector(".toaster-close").addEventListener("click", function(){
         document.querySelector(".toaster-message").classList.remove("show-toaster");
+    })
+
+    document.querySelector(".forget-device").addEventListener("click", function(){
+        this.remove();
+        document.querySelector(".device-remembered").innerHTML = "As per your preference, this device will need to be re-verified for future logins";
     })
 }
 

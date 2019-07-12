@@ -363,8 +363,15 @@ a.forget-device {
         display: flex;
     }
     .verify-cancel-cont>.verify-btn, 
-    .verify-cancel-cont>.cancel-btn{
+    .verify-cancel-cont>.cancel-btn,
+    .toaster-message-cont{
         flex: 1;
+    }
+    .toaster-message{
+        top: 0;
+        width: 100%;
+        right: 0;
+        padding: 30px 30px;
     }
 }
 
