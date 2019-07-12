@@ -1,0 +1,395 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+h1,
+p {
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.login-cont {
+    text-align: center;
+    padding: 80px 0px;
+}
+
+.login {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.overlay-content {
+    border: solid 1px #dddddd;
+    padding: 25px 0px;
+}
+
+.overlay-content>.space-between {
+    padding: 0px 20px;
+}
+
+.cross-overlay {
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.login-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.recognize-text {
+    font-size: 19px;
+    color: #333333;
+    font-weight: 400;
+    padding: 20px 0px 10px 0px;
+}
+
+.device-recognize {
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 19px;
+}
+
+p.verify {
+    font-size: 12px;
+    color: #666666;
+}
+
+p.verify>a {
+    display: block;
+    color: #0095d9;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.otp-resent {
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    background-color: #f3f9fd;
+    padding: 15px 0px;
+    display: none;
+}
+
+.show-otp {
+    display: block;
+}
+
+.label_check {
+    display: flex;
+    /* align-items: center; */
+    cursor: pointer;
+    position: relative;
+    margin: 20px 0px 30px 0px;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.def_check {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+.check {
+    width: 20px;
+    height: 18px;
+    background-color: white;
+    margin-right: 10px;
+    position: relative;
+    border: 2px solid #0095d9;
+}
+
+.check::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1796d5;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: 0.4s;
+}
+
+.check::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: scale(0);
+    left: 50%;
+    top: 42%;
+    transition: transform 0.4s;
+}
+
+.def_check:checked+.check::before {
+    transform: scale(1);
+}
+
+.def_check:checked+.check::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lock-cont {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.lock-main {
+    padding: 0px 45px;
+}
+
+.registered-mobile-para {
+    font-size: 14px;
+    line-height: 1.57;
+    color: #333333;
+    padding-top: 15px;
+}
+
+.registered-mobile-para>span {
+    font-weight: 500;
+}
+
+.pass-input {
+    padding-bottom: 15px;
+}
+
+.pass-input {
+    width: 100%;
+}
+
+.send-otp-btn,
+.pass-input,
+.registered-mobile-para>span {
+    display: block;
+}
+
+.password-input {
+    width: 100%;
+    padding: 9px 10px;
+    background-color: #fbfbfb;
+    border: solid 0.8px #dddddd;
+    font-size: 19px;
+}
+
+.invalid-password {
+    border: 0.8px solid red !important;
+}
+
+.password-input:focus {
+    border: 1px solid #0095d9;
+    transition: 0.4s;
+    outline: none;
+}
+
+.password-input::placeholder {
+    font-size: 14px;
+    color: #b2b2b2;
+}
+
+span.send-otp-btn {
+    font-size: 12px;
+    display: inline-block;
+    color: #0095d9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.verify-btn {
+    background-color: #0095d9;
+    color: white;
+    margin-right: 13px;
+}
+
+.verify-cancel-cont>.verify-btn,
+.verify-cancel-cont>.cancel-btn {
+    padding: 9px 0px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 102px;
+    border: none;
+}
+
+.cancel-btn {
+    background-color: #f3f2f2;
+    color: #666666;
+    cursor: pointer;
+}
+
+.verify-cancel-cont {
+    padding-bottom: 20px;
+}
+
+.otp-content .modal-body {
+    padding: 0;
+}
+
+.otp-content .modal-content {
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.otp-content .modal-dialog {
+    width: 506px;
+}
+
+.trouble {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.trouble>a {
+    color: #0095d9;
+}
+
+.otp-content {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+span.attempts {
+    display: block;
+    font-size: 12px;
+    color: #ff0000;
+    padding-bottom: 10px;
+}
+
+.attempt-message {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.57;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.toaster-close {
+    cursor: pointer;
+}
+
+.close-mod {
+    border: none;
+    background-color: #0095d9;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    padding: 9px 34px;
+}
+
+.lock-main>div {
+    padding: 20px 0px 30px 0px;
+}
+
+p.notified {
+    background-color: #f3f9fd;
+    padding: 15px 15px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.toaster-message {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+    background-color: #d9ecf4;
+    display: flex;
+    width: 361px;
+    position: fixed;
+    right: -100%;
+    top: 20%;
+    padding: 10px 10px;
+    z-index: 9999;
+    transition: 1s;
+}
+
+.show-toaster {
+    right: 3%;
+}
+
+.toaster-message-cont {
+    padding: 0px 13px;
+    font-size: 12px;
+    color: #5c5c5c;
+}
+
+p.login-successful {
+    font-weight: 500;
+}
+
+p.login-successful,
+p.device-remembered {
+    padding-bottom: 10px;
+}
+
+a.forget-device {
+    font-size: 13px;
+    color: #0095d9;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .otp-content .modal-dialog {
+        margin: 0;
+        padding: 20px 20px;
+        width: 100%;
+    }
+    .verify-cancel-cont{
+        display: flex;
+    }
+    .verify-cancel-cont>.verify-btn, 
+    .verify-cancel-cont>.cancel-btn{
+        flex: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .otp-content .modal-content,
+    .otp-content .modal-dialog,
+    .otp-content .modal-body,
+    .overlay-content{
+        height: 100%;
+    }
+    .verify-cancel-cont{
+        flex-direction: column;
+    }
+    .verify-cancel-cont>.verify-btn, 
+    .verify-cancel-cont>.cancel-btn{
+        width: auto;
+    }
+    .verify-btn{
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .lock-main{
+        padding: 0px 30px;
+    }
+    .close-mod{
+        width: 100%;
+    }
+}

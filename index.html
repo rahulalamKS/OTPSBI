@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="login-cont">
+        <button type="button" class="btn btn-info btn-lg login" data-toggle="modal" data-target="#index">index</button>
+        <button type="button" class="btn btn-info btn-lg login" data-toggle="modal" data-target="#unusualLogin">Unusual Login</button>
+        <button type="button" class="btn btn-info btn-lg login" data-toggle="modal" data-target="#wrongAttempts">Wrong Attempts</button>
+    </div>
+
+    <div id="index" class="modal fade otp-content" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="overlay-content" id="login">
+                            <div class="flex space-between">
+                                <span class="login-logo">
+                                    <img src="./assets/icons/login-logo.png" alt="">
+                                </span>
+                                <span class="cross-overlay" data-dismiss="modal">
+                                    <img src="./assets/icons/cross-popup.svg" alt="">
+                                </span>
+                            </div>
+                            <div class="device-recognize">
+                                <h1 class="recognize-text">We do not recognize this device</h1>
+                                <p class="verify">For your security we need to verify your identity before you can sign in.
+                                    <a href="">Learn more</a>
+                                </p>
+                            </div>
+                            <div class="otp-resent">
+                                    <span>Your OTP has been resent</span>
+                                </div>
+                            <div class="lock-main">
+                                <div class="lock-cont">
+                                    <span>
+                                        <img src="./assets/icons/lock.svg" alt="">
+                                    </span>
+                                    <p class="registered-mobile-para">
+                                        An OTP has been sent to your registered mobile
+                                        <span>
+                                             (***) ***-**
+                                            <span>889</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <span class="pass-input">
+                                        <input class="password-input" type="password" placeholder="Enter the 6-digit code">
+                                    </span>
+                                    <span class="send-otp-btn">Resend OTP</span>
+                                    <label class="label_check">
+                                        <input class="def_check" type="checkbox" name="" id="">
+                                        <div class="check"></div>
+                                        Remember this device. Do not check this if you are using a public or shared device.
+                                    </label>
+                                    <div class="verify-cancel-cont">
+                                        <button class="verify-btn">Verify</button>
+                                        <button class="cancel-btn" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                    <p class="trouble">Having trouble logging in?
+                                        <a href="">Click here to contact us</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="unusualLogin" class="modal fade otp-content" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="overlay-content" id="login">
+                                <div class="flex space-between">
+                                    <span class="login-logo">
+                                        <img src="./assets/icons/login-logo.png" alt="">
+                                    </span>
+                                    <span class="cross-overlay" data-dismiss="modal">
+                                        <img src="./assets/icons/cross-popup.svg" alt="">
+                                    </span>
+                                </div>
+                                <div class="device-recognize">
+                                    <h1 class="recognize-text">We detect an unusual login</h1>
+                                </div>
+                                <div class="lock-main">
+                                    <div>
+                                        <p class="attempt-message">
+                                                Too many unsuccessful attempts have been made. Please try again after 24 hours. 
+                                        </p>
+                                        <p class="attempt-message">
+                                                If you are having troubling signing in <a href=""> click here to contact us </a>
+                                        </p>
+                                        <p class="notified">
+                                                For your security we have also notified the registered mobile number (***) ***-** <span>889</span> 
+                                        </p>
+                                    </div>
+                                    <button class="close-mod" data-dismiss="modal">
+                                            Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    
+            </div>
+    </div>
+
+    <div id="wrongAttempts" class="modal fade otp-content" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="overlay-content" id="login">
+                                <div class="flex space-between">
+                                    <span class="login-logo">
+                                        <img src="./assets/icons/login-logo.png" alt="">
+                                    </span>
+                                    <span class="cross-overlay" data-dismiss="modal">
+                                        <img src="./assets/icons/cross-popup.svg" alt="">
+                                    </span>
+                                </div>
+                                <div class="device-recognize">
+                                    <h1 class="recognize-text">We do not recognize this device</h1>
+                                    <p class="verify">For your security we need to verify your identity before you can sign in.
+                                        <a href="">Learn more</a>
+                                    </p>
+                                </div>
+                                <div class="lock-main">
+                                    <div class="lock-cont">
+                                        <span>
+                                            <img src="./assets/icons/lock.svg" alt="">
+                                        </span>
+                                        <p class="registered-mobile-para">
+                                            An OTP has been sent to your registered mobile
+                                            <span>
+                                                 (***) ***-**
+                                                <span>889</span>
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="pass-input">
+                                            <input class="password-input invalid-password" type="password" placeholder="Enter the 6-digit code" value="rahul">
+                                        </span>
+                                        <span class="attempts">
+                                                1 of 3 failed verification attempts
+                                        </span>
+                                        <span class="send-otp-btn">Resend OTP</span>
+                                        <label class="label_check">
+                                            <input class="def_check" type="checkbox" name="" id="" checked>
+                                            <div class="check"></div>
+                                            Remember this device. Do not check this if you are using a public or shared device.
+                                        </label>
+                                        <div class="verify-cancel-cont">
+                                            <button class="verify-btn">Verify</button>
+                                            <button class="cancel-btn" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                        <p class="trouble">Having trouble logging in?
+                                            <a href="">Click here to contact us</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    
+            </div>
+    </div>
+
+    <div class="toaster-message">
+            <span>
+                <img src="./assets/icons/successful.svg" alt="">
+            </span>
+            <div class="toaster-message-cont">
+                <p class="login-successful">Login Successful</p>
+                <p class="device-remembered">As per your preference, this device will be remembered and wont need to be re-verified for future logins</p>
+                <a class="forget-device" href="">Click here to forget this device</a>
+            </div>
+            <span class="toaster-close">
+                <img src="./assets/icons/toasterClose.svg" alt="">
+            </span>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
