@@ -64,7 +64,7 @@
                                         Remember this device. Do not check this if you are using a public or shared device.
                                     </label>
                                     <div class="verify-cancel-cont">
-                                        <button class="verify-btn">Verify</button>
+                                        <button class="verify-btn" id="verify-btn">Verify</button>
                                         <button class="cancel-btn" data-dismiss="modal">Cancel</button>
                                     </div>
                                     <p class="trouble">Having trouble logging in?
@@ -137,6 +137,9 @@
                                         <a href="">Learn more</a>
                                     </p>
                                 </div>
+                                <div class="otp-resent">
+                                        <span>Your OTP has been resent</span>
+                                    </div>
                                 <div class="lock-main">
                                     <div class="lock-cont">
                                         <span>
@@ -152,10 +155,10 @@
                                     </div>
                                     <div>
                                         <span class="pass-input">
-                                            <input class="password-input invalid-password" type="password" placeholder="Enter the 6-digit code" value="rahul">
+                                            <input class="password-input" id="pass" name="Pass" type="password" placeholder="Enter the 6-digit code">
                                         </span>
                                         <span class="attempts">
-                                                1 of 3 failed verification attempts
+                                               <span class="countt">0</span> of 3 failed verification attempts
                                         </span>
                                         <span class="send-otp-btn">Resend OTP</span>
                                         <label class="label_check">
