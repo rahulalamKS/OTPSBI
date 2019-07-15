@@ -64,7 +64,7 @@ window.onload = function () {
         document.querySelector(".toaster-message").classList.toggle("show-toaster");
         setTimeout(function () {
             document.querySelector(".toaster-message").classList.remove("show-toaster");
-        }, 1500)
+        }, 8000)
     })
 
 

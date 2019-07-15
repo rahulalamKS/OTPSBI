@@ -44,6 +44,7 @@ p {
 .overlay-content {
     border: solid 1px #dddddd;
     padding: 25px 0px;
+    padding-top: 15px;
 }
 
 .overlay-content>.space-between {
@@ -51,7 +52,7 @@ p {
 }
 
 .cross-overlay {
-    margin-top: -10px;
+    /* margin-top: -9px; */
     cursor: pointer;
 }
 
@@ -103,7 +104,7 @@ p.verify>a {
     /* align-items: center; */
     cursor: pointer;
     position: relative;
-    margin: 20px 0px 30px 0px;
+    margin: 20px 0px 25px 0px;
     font-size: 12px;
     color: #666666;
     font-weight: 400;
@@ -129,11 +130,12 @@ p.verify>a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #1796d5;
+    /* background-color: #1796d5; */
+    background-color: transparent;
     width: 100%;
     height: 100%;
-    transform: scale(0);
-    transition: 0.4s;
+    /* transform: scale(0); */
+    /* transition: 0.4s; */
 }
 
 .check::after {
@@ -146,11 +148,12 @@ p.verify>a {
     transform: scale(0);
     left: 50%;
     top: 42%;
-    transition: transform 0.4s;
+    /* transition: transform 0.4s; */
 }
 
 .def_check:checked+.check::before {
-    transform: scale(1);
+    /* transform: scale(1); */
+    background-color: #1796d5;
 }
 
 .def_check:checked+.check::after {
@@ -170,7 +173,7 @@ p.verify>a {
     font-size: 14px;
     line-height: 1.57;
     color: #333333;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .registered-mobile-para>span {
@@ -244,7 +247,7 @@ span.send-otp-btn {
 }
 
 .verify-cancel-cont {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .otp-content .modal-body {
@@ -291,7 +294,7 @@ span.send-otp-btn {
     line-height: 1.57;
     font-weight: 400;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 
 .toaster-close {
@@ -308,9 +311,14 @@ span.send-otp-btn {
 }
 
 .lock-main>div {
-    padding: 20px 0px 30px 0px;
+    /* padding: 20px 0px 30px 0px; */
 }
-
+#unusualLogin .lock-main > div{
+    padding: 12px 0px 30px 0px;
+}
+#unusualLogin .overlay-content{
+    padding-bottom: 30px;
+}
 p.notified {
     background-color: #f3f9fd;
     padding: 15px 15px;
@@ -325,15 +333,16 @@ p.notified {
     width: 361px;
     position: fixed;
     right: -100%;
-    top: 20%;
+    top: 14%;
     padding: 10px 10px;
     z-index: 9999;
     transition: 1s;
 }
 
 .show-toaster {
-    right: 3%;
+    right: 2%;
 }
+
 
 .toaster-message-cont {
     padding: 0px 13px;
@@ -359,7 +368,7 @@ a.forget-device {
 @media (max-width: 768px) {
     .otp-content .modal-dialog {
         margin: 0;
-        padding: 20px 20px;
+        /* padding: 20px 20px; */
         width: 100%;
     }
     .verify-cancel-cont{
@@ -371,16 +380,47 @@ a.forget-device {
         flex: 1;
     }
     .toaster-message{
-        top: 0;
+        top: -100%;
         width: 100%;
-        /* right: 0; */
         padding: 30px 30px;
+        right: 0;
+    }
+    span.send-otp-btn,
+    .trouble{
+        display: block;
+        text-align: center;
+    }
+    .otp-content{
+        background-color: white;
+    }
+    .overlay-content{
+        border: solid 0px #dddddd;
+        padding: 35px 0px;
+    }
+    .recognize-text{
+        padding: 33px 0px 10px 0px;
+    }
+    .device-recognize{
+        padding-bottom: 25px;
+    }
+    .show-toaster{
+        top: 0;
+    }
+    .registered-mobile-para{
+        padding-top: 5px;
+    }
+    .lock-cont{
+        padding-bottom: 23px;
+    }
+    .cross-overlay{
+        margin-top: -19px;
     }
 }
 
 @media (max-width: 500px) {
     .verify-cancel-cont{
         flex-direction: column;
+        padding-bottom: 18px;
     }
     .verify-cancel-cont>.verify-btn, 
     .verify-cancel-cont>.cancel-btn{
