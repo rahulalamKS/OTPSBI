@@ -181,7 +181,7 @@ p.verify>a {
 }
 
 .pass-input {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .pass-input {
@@ -196,12 +196,22 @@ p.verify>a {
 
 .password-input {
     width: 100%;
-    padding: 9px 10px;
+    /* padding: 9px 10px; */
+    padding: 0px 10px;
+    line-height: initial;
     background-color: #fbfbfb;
     border: solid 0.8px #dddddd;
-    font-size: 19px;
+    /* font-size: 19px; */
+    font-size: 38px;
 }
 
+input.password-input::-webkit-input-placeholder {
+    position: relative;
+    top: -8px;
+}
+input.password-input:placeholder-shown{
+    color: red;
+}
 .invalid-password {
     border: 0.8px solid red !important;
 }
