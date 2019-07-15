@@ -319,6 +319,9 @@ span.send-otp-btn {
 #unusualLogin .overlay-content{
     padding-bottom: 30px;
 }
+#unusualLogin .device-recognize{
+    padding-bottom: 8px;
+}
 p.notified {
     background-color: #f3f9fd;
     padding: 15px 15px;
@@ -333,7 +336,7 @@ p.notified {
     width: 361px;
     position: fixed;
     right: -100%;
-    top: 14%;
+    top: 30px;
     padding: 10px 10px;
     z-index: 9999;
     transition: 1s;
